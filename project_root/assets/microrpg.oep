@@ -1,0 +1,27 @@
+<project>
+	<name>MicroRPG Project</name>
+	<settings>
+		<defaultWidth>320</defaultWidth>
+		<defaultHeight>240</defaultHeight>
+	</settings>
+	
+	<tilesets>
+		<tileset name="tiles" image="tiles.png" tileWidth="8" tileHeight="8" paletteScale="4"></tileset>
+	</tilesets>
+	
+	<objects>
+		<object name="start" image="player.png" width="8" height="8" limit="1"></object>
+		<object name="warp" image="warp.png" width="8" height="8">
+			<values>
+				<string name="to_map" default="[destination]" />
+				<integer name="to_x" min="0" max="1024" default="1" />
+				<integer name="to_y" min="0" max="1024" default="1" />
+			</values>
+		</object>
+	</objects>
+	
+	<layers>
+		<tiles name="tiles" gridSize="8" exportTileIDs="true" exportTileSize="true"></tiles>
+		<objects name="objects" gridSize="8"></objects>
+	</layers>
+</project>
